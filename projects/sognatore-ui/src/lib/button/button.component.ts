@@ -1,30 +1,34 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'sog-button',
   standalone: true,
-  template: `@if(appearance === 'primary') {
-    <button class="sog-button">
+  imports: [CommonModule],
+  template: `
+    <button class="sog-button" [ngClass]="appearance">
       <ng-content></ng-content>
     </button>
-    } @else {
-    <button>
-      <ng-content></ng-content>
-    </button>
-    }`,
+  `,
   styles: [
     `
       .sog-button {
-        background-color: #3498db;
-        color: white;
         padding: 10px 15px;
         border-radius: 5px;
         border: none;
         cursor: pointer;
+        &.primary {
+          background-color: #3498db;
+          color: white;
+        }
+        &.default {
+          background-color: #f2f2f2;
+          color: black;
+        }
       }
     `,
   ],
 })
-export class SognatoreButtonComponent {
-  @Input() appearance: string = 'primary';
+export class SognatoreButton {
+  @Input() appearance: string = 'default';
 }
