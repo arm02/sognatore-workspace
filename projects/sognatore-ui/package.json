@@ -1,0 +1,23 @@
+{
+  "name": "sognatore-ui",
+  "version": "1.0.0",
+  "description": "Sognatore UI Components",
+  "author": {
+    "name": "Sognatore",
+    "email": "adrianmilano.id@gmail.com"
+  },
+  "keywords": [
+    "angular",
+    "ui",
+    "components",
+    "sognatore"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^17.3.0",
+    "@angular/core": "^17.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

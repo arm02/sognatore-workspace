@@ -15,6 +15,17 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "sognatore-ui": [
+        "./dist/sognatore-ui"
+      ],
+      "sognatore-uilibbutton": [
+        "./dist/sognatore-uilibbutton"
+      ],
+      "sognatoreui": [
+        "./dist/sognatoreui"
+      ]
+    },
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
