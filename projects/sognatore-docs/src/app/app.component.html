@@ -1,0 +1,263 @@
+<!-- Documentation Layout -->
+<div class="docs-layout">
+  <!-- Header -->
+  <header class="docs-header">
+    <div class="container flex items-center justify-between">
+      <!-- Logo and Title -->
+      <div class="flex items-center">
+        <button
+          class="mobile-menu-toggle"
+          (click)="toggleSidebar()"
+          aria-label="Toggle navigation menu"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              d="M3 12H21M3 6H21M3 18H21"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+
+        <a routerLink="/" class="flex items-center gap-3">
+          <div class="logo">
+            <img
+              src="assets/logo.svg"
+              alt="Sognatore UI Logo"
+              class="h-8 w-8"
+            />
+          </div>
+          <div class="logo-text">
+            <h1 class="text-xl font-bold text-gray-900">Sognatore UI</h1>
+            <p class="text-sm text-gray-500">Documentation</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Header Actions -->
+      <div class="flex items-center gap-4">
+        <!-- Search -->
+        <div class="search-container">
+          <input
+            type="search"
+            placeholder="Search documentation..."
+            class="search-input"
+            [(ngModel)]="searchQuery"
+            (input)="onSearch($event)"
+          />
+          <svg
+            class="search-icon"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z"
+              stroke="currentColor"
+              stroke-width="1.33333"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M14 14L11.1 11.1"
+              stroke="currentColor"
+              stroke-width="1.33333"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+
+        <!-- GitHub Link -->
+        <a
+          href="https://github.com/sognatore/sognatore-ui"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="github-link"
+          aria-label="View on GitHub"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+            />
+          </svg>
+        </a>
+
+        <!-- NPM Link -->
+        <a
+          href="https://www.npmjs.com/package/@sognatore/ui"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="npm-link"
+          aria-label="View on NPM"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0H1.763zM5.13 5.323l13.837.019-.009 13.836h-3.464l.01-10.382h-3.456L12.04 19.17H5.113l.017-13.847z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <div class="docs-main">
+    <!-- Sidebar -->
+    <aside class="docs-sidebar" [class.open]="sidebarOpen">
+      <nav class="sidebar-nav">
+        <!-- Getting Started -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">Getting Started</h3>
+          <ul class="nav-links">
+            <li>
+              <a routerLink="/home" routerLinkActive="active">Overview</a>
+            </li>
+            <li>
+              <a routerLink="/getting-started" routerLinkActive="active"
+                >Installation</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Components -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">Components</h3>
+          <ul class="nav-links">
+            <li>
+              <a
+                routerLink="/components"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Overview</a
+              >
+            </li>
+
+            <!-- Form Components -->
+            <li class="nav-subsection">
+              <span class="nav-subsection-title">Form</span>
+              <ul class="nav-sublinks">
+                <li>
+                  <a routerLink="/components/button" routerLinkActive="active"
+                    >Button</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/components/input" routerLinkActive="active"
+                    >Input</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Layout Components -->
+            <li class="nav-subsection">
+              <span class="nav-subsection-title">Layout</span>
+              <ul class="nav-sublinks">
+                <li>
+                  <a routerLink="/components/card" routerLinkActive="active"
+                    >Card</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/components/modal" routerLinkActive="active"
+                    >Modal</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/components/dialog" routerLinkActive="active"
+                    >Dialog</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/components/navbar" routerLinkActive="active"
+                    >Navbar</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/components/tabs" routerLinkActive="active"
+                    >Tabs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    routerLink="/components/accordion"
+                    routerLinkActive="active"
+                    >Accordion</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- UI Components -->
+            <li class="nav-subsection">
+              <span class="nav-subsection-title">UI</span>
+              <ul class="nav-sublinks">
+                <li>
+                  <a routerLink="/components/icon" routerLinkActive="active"
+                    >Icon</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/components/badge" routerLinkActive="active"
+                    >Badge</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/components/progress" routerLinkActive="active"
+                    >Progress</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/components/chip" routerLinkActive="active"
+                    >Chip</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/components/tooltip" routerLinkActive="active"
+                    >Tooltip</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tools -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">Tools</h3>
+          <ul class="nav-links">
+            <li>
+              <a routerLink="/playground" routerLinkActive="active"
+                >Playground</a
+              >
+            </li>
+            <li>
+              <a routerLink="/examples" routerLinkActive="active">Examples</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Content -->
+    <main class="docs-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+
+  <!-- Sidebar Overlay for Mobile -->
+  <div
+    class="sidebar-overlay"
+    [class.visible]="sidebarOpen"
+    (click)="closeSidebar()"
+  ></div>
+</div>

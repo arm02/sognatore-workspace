@@ -1,23 +1,55 @@
 {
-  "name": "sognatore-ui",
+  "name": "@sognatore/ui",
   "version": "1.0.2",
-  "description": "Sognatore UI Components",
+  "description": "A modern Angular component library built with standalone components - 13+ production-ready components for building beautiful user interfaces",
   "author": {
-    "name": "Sognatore",
-    "email": "adrianmilano.id@gmail.com"
+    "name": "Adrian Milano",
+    "email": "adrianmilano.id@gmail.com",
+    "url": "https://github.com/arm02"
   },
+  "homepage": "https://github.com/arm02/sognatore-workspace#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arm02/sognatore-workspace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arm02/sognatore-workspace/issues"
+  },
+  "license": "MIT",
   "keywords": [
     "angular",
+    "angular17",
     "ui",
     "components",
-    "sognatore"
+    "design-system",
+    "typescript",
+    "standalone-components",
+    "sognatore",
+    "ui-library",
+    "frontend",
+    "web-components",
+    "responsive",
+    "accessible",
+    "modern"
   ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "peerDependencies": {
-    "@angular/common": "^17.3.0",
-    "@angular/core": "^17.3.0"
+    "@angular/common": "^17.0.0",
+    "@angular/core": "^17.0.0",
+    "@angular/forms": "^17.0.0",
+    "rxjs": "^7.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "**/*"
+  ]
 }
