@@ -2,7 +2,13 @@
 
 A modern Angular component library built with standalone components, designed for productivity, consistent design, and seamless integration. Create beautiful, accessible, and performant user interfaces with ease.
 
-`Made with ❤️ by the Sognatore team.`
+`Made with ❤️ by the Adrian Milano.`
+
+---
+
+## 📖 Documentation
+
+- **🏠 [Live Documentation](https://sognatore.my.id/)** Installation and setup guide
 
 ---
 
@@ -421,10 +427,10 @@ All components are mobile-first and responsive:
 
 ## 📖 Documentation
 
-- **🏠 [Live Documentation](http://localhost:4200)** - Interactive component demos
-- **🎮 [Playground](http://localhost:4200/components/tooltip/playground)** - Real-time configuration
-- **💡 [Examples](http://localhost:4200/components/tooltip/examples)** - Real-world patterns
-- **🚀 [Getting Started](http://localhost:4200/getting-started)** - Installation and setup guide
+- **🏠 [Live Documentation](https://sognatore.my.id/)** - Interactive component demos
+- **🎮 [Playground](https://sognatore.my.id/components/tooltip/playground)** - Real-time configuration
+- **💡 [Examples](https://sognatore.my.id/components/tooltip/examples)** - Real-world patterns
+- **🚀 [Getting Started](https://sognatore.my.id/getting-started)** - Installation and setup guide
 
 ---
 
