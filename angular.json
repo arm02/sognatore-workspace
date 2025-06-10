@@ -69,7 +69,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/sognatore-docs",
+            "outputPath": "docs",
             "index": "projects/sognatore-docs/src/index.html",
             "browser": "projects/sognatore-docs/src/main.ts",
             "polyfills": [
