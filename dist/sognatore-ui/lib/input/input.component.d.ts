@@ -1,0 +1,37 @@
+import { EventEmitter } from '@angular/core';
+import { ControlValueAccessor } from '@angular/forms';
+import * as i0 from "@angular/core";
+export declare class SognatoreInput implements ControlValueAccessor {
+    type: string;
+    name: string;
+    placeholder: string;
+    label: string;
+    helperText: string;
+    errorMessage: string;
+    required: boolean;
+    disabled: boolean;
+    readonly: boolean;
+    size: 'small' | 'medium' | 'large';
+    variant: 'outlined' | 'filled' | 'underlined';
+    state: 'default' | 'error' | 'success' | 'warning';
+    prefixIcon: string;
+    suffixIcon: string;
+    inputId: string;
+    focus: EventEmitter<Event>;
+    blur: EventEmitter<Event>;
+    inputChange: EventEmitter<string>;
+    value: string;
+    onChange: (value: string) => void;
+    onTouched: () => void;
+    handleInput(event: Event): void;
+    handleFocus(event: Event): void;
+    handleBlur(event: Event): void;
+    writeValue(value: string): void;
+    registerOnChange(fn: any): void;
+    registerOnTouched(fn: any): void;
+    setDisabledState(isDisabled: boolean): void;
+    getContainerClasses(): string[];
+    getInputClasses(): string[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<SognatoreInput, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SognatoreInput, "sog-input", never, { "type": { "alias": "type"; "required": false; }; "name": { "alias": "name"; "required": false; }; "placeholder": { "alias": "placeholder"; "required": false; }; "label": { "alias": "label"; "required": false; }; "helperText": { "alias": "helperText"; "required": false; }; "errorMessage": { "alias": "errorMessage"; "required": false; }; "required": { "alias": "required"; "required": false; }; "disabled": { "alias": "disabled"; "required": false; }; "readonly": { "alias": "readonly"; "required": false; }; "size": { "alias": "size"; "required": false; }; "variant": { "alias": "variant"; "required": false; }; "state": { "alias": "state"; "required": false; }; "prefixIcon": { "alias": "prefixIcon"; "required": false; }; "suffixIcon": { "alias": "suffixIcon"; "required": false; }; "inputId": { "alias": "inputId"; "required": false; }; }, { "focus": "focus"; "blur": "blur"; "inputChange": "inputChange"; }, never, never, true, never>;
+}

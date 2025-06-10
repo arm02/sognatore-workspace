@@ -1,0 +1,38 @@
+import { ElementRef, OnDestroy } from '@angular/core';
+import * as i0 from "@angular/core";
+export declare class SognatoreTooltip implements OnDestroy {
+    text: string;
+    position: 'top' | 'bottom' | 'left' | 'right';
+    variant: 'basic' | 'material' | 'info' | 'warning' | 'error' | 'success';
+    delay: number;
+    hideDelay: number;
+    disabled: boolean;
+    trigger: 'hover' | 'click' | 'focus' | 'manual';
+    wrapper: ElementRef;
+    tooltipElement: ElementRef;
+    isVisible: boolean;
+    tooltipTop: number;
+    tooltipLeft: number;
+    transform: string;
+    tooltipId: string;
+    private showTimeout?;
+    private hideTimeout?;
+    private isManuallyTriggered;
+    onMouseEnter(): void;
+    onMouseLeave(): void;
+    onClick(): void;
+    onFocus(): void;
+    onBlur(): void;
+    onDocumentClick(event: Event): void;
+    private scheduleShow;
+    private scheduleHide;
+    show(): void;
+    hide(): void;
+    toggle(): void;
+    private updatePosition;
+    private clearTimeouts;
+    getTooltipClasses(): string[];
+    ngOnDestroy(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SognatoreTooltip, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SognatoreTooltip, "sog-tooltip", never, { "text": { "alias": "text"; "required": false; }; "position": { "alias": "position"; "required": false; }; "variant": { "alias": "variant"; "required": false; }; "delay": { "alias": "delay"; "required": false; }; "hideDelay": { "alias": "hideDelay"; "required": false; }; "disabled": { "alias": "disabled"; "required": false; }; "trigger": { "alias": "trigger"; "required": false; }; }, {}, never, ["*", "[slot=tooltip]"], true, never>;
+}
