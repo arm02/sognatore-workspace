@@ -1,5 +1,0 @@
-<!-- 404.html -->
-<script>
-  // redirect semua path ke index.html agar Angular bisa handle routing-nya
-  location.replace("/index.html");
-</script>
